@@ -357,6 +357,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
     background-color: var(--r-background-color);
   }
 }
+html {
+  font-size: min(2.5vw, 3.3333333333vh);
+}
+
 .reveal {
   background-color: hsl(263, 50%, 90%);
 }
@@ -375,31 +379,60 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   display: block;
   border-bottom: 10px solid hsl(263, 50%, 50%);
   width: 80%;
-  margin: 0.2em 1em 1em 0;
+  margin: 0.2rem 1rem 1rem 0;
 }
 .reveal .slides h2:after {
   border-bottom: 5px solid hsl(263, 50%, 50%);
   width: 80%;
-  margin: 0.2em 1em 1em 0;
+  margin: 0.2rem 1rem 1rem 0;
 }
 .reveal .slides h3 {
-  margin-top: 1em;
+  margin-top: 1rem;
 }
-.reveal .slides figure {
-  margin: 1em 2em;
+.reveal .slides figure, .reveal .slides .figure {
+  margin: 1rem 2rem;
   text-align: center;
 }
-.reveal .slides figure img {
+.reveal .slides figure img, .reveal .slides .figure img {
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
+}
+.reveal .slides figure .superfigure, .reveal .slides .figure .superfigure {
+  margin: -0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-basis: 1 1 0;
+  width: attr(width);
+  justify-content: center;
+  row-gap: 1em;
+}
+.reveal .slides figure .superfigure.multiline, .reveal .slides .figure .superfigure.multiline {
+  flex-wrap: wrap;
+}
+.reveal .slides figure .superfigure > :is(figure, .figure), .reveal .slides .figure .superfigure > :is(figure, .figure) {
+  margin: 0.5rem;
+  width: auto;
+  flex-basis: min-content;
+  max-width: max-content;
+  flex-grow: 1;
+}
+.reveal .slides figure .superfigure > :is(figure, .figure) caption, .reveal .slides .figure .superfigure > :is(figure, .figure) caption {
+  font-size: 0.9rem;
+}
+.reveal .slides figure .superfigure .break, .reveal .slides figure .superfigure hr, .reveal .slides .figure .superfigure .break, .reveal .slides .figure .superfigure hr {
+  flex-basis: 100%;
+  height: 0;
+  border: none;
 }
 .reveal .slides ul {
   display: block;
 }
 .reveal .slides .figurewrap {
   float: right;
-  margin: 1em 2em;
+  margin: 1rem 2rem;
 }
 .reveal .slides .figurewrap figure {
   margin: 0;
@@ -416,8 +449,8 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal .slides table tbody tr:nth-child(even) {
   background-color: hsl(263, 50%, 98%);
 }
-.reveal .slides code {
-  font-size: 1.4em;
+.reveal .slides pre {
+  font-size: 1.2rem;
 }
 .reveal .slides #title-slide, .reveal .slides .slide {
   padding: 2em;
@@ -427,7 +460,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   width: 100%;
 }
 .reveal .slides #title-slide h1.title:after {
-  margin-top: 0.5em;
+  margin-top: 0.5rem;
   border-bottom: 20px solid hsl(263, 50%, 50%);
 }
 .reveal .slides #title-slide .date {
