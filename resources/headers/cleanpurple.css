@@ -390,8 +390,31 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   text-align: center;
 }
 .reveal .slides figure img {
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
+}
+.reveal .slides ul {
+  display: block;
+}
+.reveal .slides .figurewrap {
+  float: right;
+  margin: 1em 2em;
+}
+.reveal .slides .figurewrap figure {
+  margin: 0;
+}
+.reveal .slides table thead {
+  background-color: hsl(263, 50%, 90%);
+}
+.reveal .slides table tr, .reveal .slides table th, .reveal .slides table td {
+  border: none;
+}
+.reveal .slides table tbody tr:nth-child(odd) {
+  background-color: hsl(263, 50%, 96%);
+}
+.reveal .slides table tbody tr:nth-child(even) {
+  background-color: hsl(263, 50%, 98%);
 }
 .reveal .slides code {
   font-size: 1.4em;

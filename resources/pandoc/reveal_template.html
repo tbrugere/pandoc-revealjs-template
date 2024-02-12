@@ -27,7 +27,11 @@ $endif$
 $if(theme)$
   <link rel="stylesheet" href="$revealjs-url$/dist/theme/$theme$.css" id="theme">
 $else$
+  $if(custom-theme)$
+  <link rel="stylesheet" href="$custom-theme$" id="theme"/>
+  $else$
   <link rel="stylesheet" href="$revealjs-url$/dist/theme/black.css" id="theme">
+  $endif$
 $endif$
 $for(css)$
   <link rel="stylesheet" href="$css$"/>

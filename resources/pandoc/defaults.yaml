@@ -1,7 +1,10 @@
 # section-divs: true
 standalone: true
 number-sections: true
-css: resources/reveal/cleanpurple.css
+
+
+css: 
+  - resources/headers/admonitions.css
 
 to: revealjs
 template: resources/pandoc/reveal_template.html
@@ -10,6 +13,8 @@ include-in-header:
     - resources/headers/math-header.html
 # shift-heading-level-by: -1
 # citeproc: true
+#
+incremental: true
 
 filters: #[]
   # - pandoc-xnos
@@ -27,6 +32,8 @@ metadata:
   showSlideNumber: 'all'
   disableLayout: True
   progress: True
+  custom-theme: resources/headers/cleanpurple.css
+  revealjs-url: resources/reveal
 #   margin-left: 1cm
 #   margin-right: 1cm
 #   margin-top: 1cm

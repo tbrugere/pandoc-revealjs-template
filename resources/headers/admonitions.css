@@ -1,0 +1,27 @@
+
+.note,.warning {
+    /* border: 1px solid black; */
+    border-radius: 0.2em;
+    margin: 1em;
+    padding: .1em 1em .1em 1em; 
+}
+
+
+.note::before{
+    content: "Note: " attr(title);
+}
+
+:is(.note,.warning)::before{
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid black;
+}
+
+.warning{
+    background-color: hsl(7, 100%, 95%);
+}
+
+.note{
+    background-color: hsl(198, 100%, 95%);
+}
