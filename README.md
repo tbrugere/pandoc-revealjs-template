@@ -1,3 +1,4 @@
+# Template to create beautiful presentations with pandoc and reveal.js
 
 
 Currently, this uses its own version of `reveal.js` (cloned in `resources/reveal`)
