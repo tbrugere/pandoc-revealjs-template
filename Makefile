@@ -12,7 +12,7 @@ THEMEDIR=resources/cleanpurple
 THEMENAME=cleanpurple
 USE_CUSTOM_THEME=True
 
-ifeq $(USE_CUSTOM_THEME) True
+ifeq ($(USE_CUSTOM_THEME), True)
 	THEME_TARGET=resources/headers/custom.css
 else
 	THEME_TARGET=resources/headers/$(THEMENAME).css
@@ -43,7 +43,7 @@ resources/headers/$(THEMENAME).css: $(THEMEDIR)/dist/$(THEMENAME).css
 $(THEMEDIR)/dist/$(THEMENAME).css: $(THEMEDIR)/$(THEMENAME).scss 
 	make -C $(dir $<)
 
-resources/headers/custom.css: resources/custom/custom.scss
+resources/headers/custom.css: resources/custom_theme/custom.scss
 	sass $(SASS_INCLUDES) $< $@
 
 serve: $(HTML_TARGETS) | $(BUILDDIR)/resources

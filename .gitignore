@@ -1,4 +1,5 @@
 build/
 main.html
 resources/headers/custom.css
+resources/headers/custom.css.map
 resources/custom/dist
