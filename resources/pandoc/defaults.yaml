@@ -1,29 +1,25 @@
-# section-divs: true
+# cosmetic parameters
+incremental: true #whether to make list items pop up incrementally by default
+number-sections: true #what it says
+slide-level: 2 #cleanpurple is build to function with this setting. 
+
+#citeproc: true # set to true to enable documentation
+# bibliography: "./resources/bibliography.bib"
+
 standalone: true
-number-sections: true
-
-
 css: 
   - resources/headers/admonitions.css
-
 to: revealjs
 template: resources/pandoc/reveal_template.html
-
 include-in-header:
     - resources/headers/math-header.html
-# shift-heading-level-by: -1
-# citeproc: true
-#
-incremental: true
 
-filters: #[]
+
+filters: 
   # - pandoc-xnos
   # - pandoc-theoremnos
   # - pandoc-eqnos
   - pandoc-fignos
-# css:
-#   - /resources/headers/eqnos.css
-#   - /resources/headers/100-bytes.css
 html-math-method:
   method: mathjax
 metadata:
@@ -32,14 +28,11 @@ metadata:
   showSlideNumber: 'all'
   disableLayout: True
   progress: True
-  custom-theme: resources/headers/cleanpurple.css
+  custom-theme: resources/headers/custom.css
   revealjs-url: resources/reveal
-#   margin-left: 1cm
-#   margin-right: 1cm
-#   margin-top: 1cm
-#   margin-bottom: 1cm
-#   document-css: false
-  # bibliography: "./resources/bibliography.bib"
+  display: ""
+  transition: slide
+  bibliography: "./resources/bibliography.bib"
   # theoremnos-cleveref: True
   # xnos-number-by-section: True
   # link-citations: true
