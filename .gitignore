@@ -1,2 +1,4 @@
 build/
 main.html
+resources/headers/custom.css
+resources/custom/dist
