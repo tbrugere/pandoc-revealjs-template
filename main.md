@@ -18,3 +18,17 @@ Keywords: [not, used, yet ] # eventually in the html <meta>
 
 ## Slide 1
 hello
+
+- Normal
+- List
+
+## Slide 2
+
+::: list-in-blocks
+- List but
+    - It's actually in blocks
+- Isn't it pretty?
+- I like this 
+    - very
+    - much
+:::

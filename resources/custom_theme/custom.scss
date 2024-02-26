@@ -1,62 +1,24 @@
 
-@use 'sass:list';
-@use 'sass:color';
-
-// core colors:
-$ucsd-navy: #182B49;
-$ucsd-blue: #00629B;
-$ucsd-yellow: #FFCD00;
-$ucsd-gold: #C69214;
-
-// Accent colors:
-$ucsd-turquoise: #00C6D7;
-$ucsd-magenta: #D462AD;
-$ucsd-sand: #F5F0E6;
-$ucsd-citron: #F3E500;
-$ucsd-orange: #FC8900;
-$ucsd-green: #6E963B;
-
-$accent-colors: $ucsd-turquoise, $ucsd-magenta, $ucsd-sand, $ucsd-citron, $ucsd-orange, $ucsd-green;
-$n-accent-colors: length($accent-colors);
-$replace-colors: $ucsd-magenta, $ucsd-green;
-
-// Neutral colors:
-$ucsd-black: #000000;
-$ucsd-gray: #747678;
-$ucsd-stone: #B6B1A9;
-$ucsd-white: #FFFFFF;
-
-$sans-serif-font: "Open Sans", Roboto, sans-serif;
-$serif-font: 'Georgia', "Lora", "Times new roman", serif;
-
-$aspect-width: 15 ;
-$aspect-height: 9 ;
-
-@use 'cleanpurple.scss' with (
-    $font-color: $ucsd-black, 
-    $footer-color: $ucsd-navy, 
-    $heading-color: $ucsd-navy, 
-    $margins-color: $ucsd-blue,
-    $title-underline-color: $ucsd-gold, 
-    $link-color: $ucsd-turquoise, 
-    $main-font: $serif-font, 
-    $heading-font: $sans-serif-font, 
-    $aspect-width: $aspect-width, 
-    $aspect-height: $aspect-height, 
-    $accent-colors: $accent-colors,
-    $replace-colors: $replace-colors
-);
+@use 'cleanpurple.scss'; // look below for how to change theme parameters
+// @use 'cleanpurple.scss' with (
+//     $font-color: $ucsd-black, 
+//     $footer-color: $ucsd-navy, 
+//     $heading-color: $ucsd-navy, 
+//     $margins-color: $ucsd-blue,
+//     $title-underline-color: $ucsd-gold, 
+//     $link-color: $ucsd-turquoise, 
+//     $main-font: $serif-font, 
+//     $heading-font: $sans-serif-font, 
+//     $aspect-width: $aspect-width, 
+//     $aspect-height: $aspect-height, 
+//     $accent-colors: $accent-colors,
+//     $replace-colors: $replace-colors
+// ;
 
 .portrait {
     object-fit: cover;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
-    border: 1px solid $ucsd-yellow;
-}
-
-
-
-.hg-green{
-    color:$ucsd-green;
+    border: 1px solid black;
 }
 

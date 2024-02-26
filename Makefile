@@ -43,7 +43,7 @@ resources/headers/$(THEMENAME).css: $(THEMEDIR)/dist/$(THEMENAME).css
 $(THEMEDIR)/dist/$(THEMENAME).css: $(THEMEDIR)/$(THEMENAME).scss 
 	make -C $(dir $<)
 
-resources/headers/custom.css: resources/custom_theme/custom.scss
+resources/headers/custom.css: resources/custom_theme/custom.scss $(REVEAL_DIR) $(THEMEDIR)
 	sass $(SASS_INCLUDES) $< $@
 
 serve: $(HTML_TARGETS) | $(BUILDDIR)/resources
